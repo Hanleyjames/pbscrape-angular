@@ -1,0 +1,9 @@
+#navbar{
+  background-color: SeaGreen;
+  border-style: solid;
+  border: 0px 0px 2px 0px;
+  border-color: DarkSlateGrey;
+}
+li{
+  list-style: none;
+}
