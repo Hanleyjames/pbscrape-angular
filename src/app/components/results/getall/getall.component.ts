@@ -10,7 +10,7 @@ import { Observable } from 'rxjs/Observable';
 export class GetallComponent implements OnInit {
 
   readonly ROOT_URL: 'https://localhost:44313/api/';
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
   }
