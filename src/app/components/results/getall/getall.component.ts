@@ -10,9 +10,16 @@ import {KeywordsService} from '../../../_services/keywords.service';
 })
 export class GetallComponent implements OnInit {
 
-  constructor(private http: HttpClient) { }
+  keywords: Object;
+
+  constructor(private http: HttpClient,
+              private data: KeywordsService) { }
 
   ngOnInit() {
+    this.data.getAllData().subscribe(data => {
+      this.keywords = data;
+      console.log(this.keywords);
+    })
   }
 
 }
