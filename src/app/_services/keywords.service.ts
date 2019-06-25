@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {Keyword} from '../_models/keywords';
 import {BehaviorSubject} from 'rxjs';
 import {distinctUntilChanged} from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,6 @@ export class KeywordsService {
 
   constructor(private http: HttpClient) { }
   getAll(){
-    return this.http.get(ROOT_URL);
+    return this.http.get(this.ROOT_URL);
   }
 }

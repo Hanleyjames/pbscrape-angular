@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
+import {KeywordsService} from '../../../_services/keywords.service';
 
 @Component({
   selector: 'app-getall',
@@ -9,7 +10,6 @@ import { Observable } from 'rxjs/Observable';
 })
 export class GetallComponent implements OnInit {
 
-  readonly ROOT_URL: 'https://localhost:44313/api/';
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
